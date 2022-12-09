@@ -1,39 +1,39 @@
-Title,Year,Director,Runtime,Rating on iMDB,Number of ratings
-Lawrence of Arabia,1962,David Lean,Cast & crew,8.3,295K
-The Social Network,2010,David Fincher,Cast & crew,7.8,703K
-The Karate Kid,1984,John G. Avildsen,Cast & crew,7.3,227K
-Café Society,2016,Woody Allen,Cast & crew,6.6,78K
-Y tu mamá también,2001,Alfonso Cuarón,Cast & crew,7.7,124K
-La Grande Bellezza,2013,Paolo Sorrentino,Cast & crew,7.7,92K
-Tangerine,2015,Sean Baker,Cast & crew,7.1,33K
-Mandy,2018,Panos Cosmatos,Cast & crew,6.5,80K
-Malcolm and Marie,2021,Sam Levinson,Cast & crew,6.6,38K
-28 Days Later,2002,Danny Boyle,Cast & crew,7.5,416K
-Seven Samurai,1954,Akira Kurosawa,Cast & crew,8.6,346K
-Pokémon: Mewtwo contraataca,1998,Kunihiko Yuyama,Cast & crew,6.2,44K
-Groundhog Day,1993,Harold Ramis,Cast & crew,8.1,631K
-Promising Young Woman,2020,Emerald Fennell,Cast & crew,7.5,174K
-Make Happy,2016,Bo Burnham,Cast & crew,8.3,15K
-Inside,2021,Bo Burnham,Cast & crew,7.7,20K
-I Origins,2014,Mike Cahill,Cast & crew,7.3,127K
-My Octopus Teacher,2020,Pippa Ehrlich,Cast & crew,8.1,55K
-La librería,2017,Isabel Coixet,Cast & crew,6.5,16K
-Spider-man,2002,Sam Raimi,Cast & crew,7.4,817K
-Spider-man 2,2004,Sam Raimi,Cast & crew,7.4,653K
-Dune,1984,David Lynch,Cast & crew,6.3,163K
-12 Monkeys,1995,Terry Gilliam,Cast & crew,8.0,619K
-Arrival,2016,Denis Villeneuve,Cast & crew,7.9,694K
-Vivarium,2019,Lorcan Finnegan,Cast & crew,5.8,60K
-Bleu,1993,Krzysztof Kieślowski,Cast & crew,7.9,103K
-Dune,2021,Denis Villeneuve,Cast & crew,8.0,629K
-Goodnight Mommy,2014,Veronika Franz,Cast & crew,6.7,55K
-Vertigo,1958,Alfred Hitchcock,Cast & crew,8.3,403K
-Hausu,1977,Nobuhiko Obayashi,Cast & crew,7.3,29K
-The Killing of a Sacred Deer,2017,Yorgos Lanthimos,Cast & crew,7.0,156K
-Tesis,1996,Alejandro Amenábar,Cast & crew,7.4,40K
-El séptimo sello,1957,Ingmar Bergman,Cast & crew,8.1,186K
-The Straight Story,1999,David Lynch,Cast & crew,8.0,91K
-Last Night in Soho,2021,Edgar Wright,Cast & crew,7.1,137K
-È stata la mano di Dio,2021,Paolo Sorrentino,Cast & crew,7.3,43K
-Spider-Man: No Way Home,2021,Jon Watts,Cast & crew,8.3,748K
-House of Gucci,2021,Ridley Scott,Cast & crew,6.6,135K
+Title,Year,Director,Runtime,Country,Rating on iMDB,Number of ratings
+Lawrence of Arabia,1962,David Lean,222,Reino Unido,"8,0",46.890
+The Social Network,2010,David Fincher,120,Estados Unidos,"6,8",95.059
+The Karate Kid,1984,John G. Avildsen,126,Estados Unidos,"6,1",59.785
+Café Society,2016,Woody Allen,96,Estados Unidos,"6,4",24.051
+Y tu mamá también,2001,Alfonso Cuarón,105,México,"6,6",36.631
+La Grande Bellezza,2013,Paolo Sorrentino,142,Italia,"7,4",36.408
+Tangerine,2015,Sean Baker,88,Estados Unidos,"6,8",3.561
+Mandy,2018,Panos Cosmatos,121,Estados Unidos,"5,7",7.748
+Malcolm and Marie,2021,Sam Levinson,106,Estados Unidos,"6,4",4.028
+28 Days Later,2002,Danny Boyle,113,Reino Unido,"6,7",75.123
+Seven Samurai,1954,Akira Kurosawa,205,Japón,"8,4",42.348
+Pokémon: Mewtwo contraataca,1998,Kunihiko Yuyama,98,Japón,"4,9",787
+Groundhog Day,1993,Harold Ramis,101,Estados Unidos,"7,4",73.784
+Promising Young Woman,2020,Emerald Fennell,113,Reino Unido,"6,9",16.745
+Make Happy,2016,Bo Burnham,60,Estados Unidos,"7,5",1.104
+Inside,2021,Bo Burnham,59,Reino Unido,"6,0",1.603
+I Origins,2014,Mike Cahill,113,Estados Unidos,"6,7",23.912
+My Octopus Teacher,2020,Pippa Ehrlich,85,Sudáfrica,"7,3",9.366
+La librería,2017,Isabel Coixet,90,Reino Unido,"4,2",95
+Spider-man,2002,Sam Raimi,121,Estados Unidos,"6,4",93.661
+Spider-man 2,2004,Sam Raimi,127,Estados Unidos,"6,2",91.899
+Dune,1984,David Lynch,155,Estados Unidos,"7,2",35.851
+12 Monkeys,1995,Terry Gilliam,130,Estados Unidos,"7,4",118.867
+Arrival,2016,Denis Villeneuve,116,Estados Unidos,"7,3",64.917
+Vivarium,2019,Lorcan Finnegan,97,Irlanda,"5,7",9.960
+Bleu,1993,Krzysztof Kieślowski,122,Marruecos,"7,3",45
+Dune,2021,Denis Villeneuve,155,Estados Unidos,"7,2",35.851
+Goodnight Mommy,2014,Veronika Franz,92,Estados Unidos,"5,3",1.062
+Vertigo,1958,Alfred Hitchcock,120,Estados Unidos,"8,2",70.758
+Hausu,1977,Nobuhiko Obayashi,88,Japón,"6,3",1.983
+The Killing of a Sacred Deer,2017,Yorgos Lanthimos,121,Reino Unido,"6,6",18.576
+Tesis,1996,Alejandro Amenábar,125,España,"7,7",95.035
+El séptimo sello,1957,Ingmar Bergman,96,Suecia,"8,1",34.802
+The Straight Story,1999,David Lynch,111,Estados Unidos,"7,8",42.226
+Last Night in Soho,2021,Edgar Wright,118,Reino Unido,"6,6",12.386
+È stata la mano di Dio,2021,Paolo Sorrentino,130,Italia,"7,1",13.338
+Spider-Man: No Way Home,2021,Jon Watts,148,Estados Unidos,"7,1",25.793
+House of Gucci,2021,Ridley Scott,157,Estados Unidos,"6,2",11.817

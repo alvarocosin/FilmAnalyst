@@ -23,40 +23,76 @@ def make_list():
         movies.append(movie)
     return movies
 
+def progress_bar(progress, total):
+    percent = 100 * (progress / float(total))
+    bar = '█' * int(percent) + '-' * (100 - int(percent))
+    print(f"\r|{bar}| {percent:.2f}%", end="\r")  
+
+
 def get_movies_data(movie_list):
     titles = list()
     years = list()
     directors = list()
+    runtimes = list()
+    countries = list()
     ratings = list()
     number_ratings = list()
+    
+    cont = 0
+    total = len(movie_list)
+    progress_bar(cont, total)
     for movie in movie_list:
-        q = movie.title + " " + movie.year
+        q = movie.title
         query = q.replace(' ', '+')
         headers = {'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'}
-        url = 'https://www.imdb.com/find?q=' + query
+        url = 'https://www.filmaffinity.com/es/search.php?stext=' + query
         page = requests.get(url, headers=headers)
         soup = BeautifulSoup(page.content, 'lxml')
+        search = soup.find_all('div', class_='mc-title')
+        if(len(search) > 0):
+            results = list()
+            search = soup.find_all('div', class_='mc-title')
+            
+            for film in search:
+                for element in film.find_all('a'):
+                    link = element['href']
+                    results.append(link)
+            url = results[0]
+            
+            page = requests.get(url, headers=headers)
+            soup = BeautifulSoup(page.content, 'lxml')
 
-        results = list()
-        for search in soup.find_all('a', class_='ipc-metadata-list-summary-item__t'):
-            link = search['href']
-            results.append(link)
-        movie_id = results[0]
-
-        url = 'https://www.imdb.com' + movie_id
-        page = requests.get(url, headers=headers)
-        soup = BeautifulSoup(page.content, 'lxml')
-
-        rating = soup.find('span', class_='sc-7ab21ed2-1 jGRxWM').text
-        n_ratings = soup.find('div', class_='sc-7ab21ed2-3 dPVcnq').text
+            runtime = soup.find('dd', itemprop='duration').text
+            runtime = runtime.strip(' min.')
+            country_name = ''
+            country = soup.find('span', id='country-img')
+            for cname in country:
+                country_name = cname['alt']
+            rating = soup.find('div', id='movie-rat-avg').text
+            rating = rating.strip()
+            n_ratings = soup.find('span', itemprop='ratingCount').text
+        else:
+            runtime = soup.find('dd', itemprop='duration').text
+            runtime = runtime.strip(' min.')
+            country_name = ''
+            country = soup.find('span', id='country-img')
+            for cname in country:
+                country_name = cname['alt']
+            rating = soup.find('div', id='movie-rat-avg').text
+            rating = rating.strip()
+            n_ratings = soup.find('span', itemprop='ratingCount').text
+        runtimes.append(runtime)
+        countries.append(country_name)
         ratings.append(rating)
         number_ratings.append(n_ratings)
+        cont += 1
+        progress_bar(cont, total)
     for movie in movie_list:
         titles.append(movie.title)
         years.append(movie.year)
         directors.append(movie.director)
     length = len(movie_list)
-    df = pd.DataFrame({'Title': titles, 'Year': years, 'Director': directors, 'Rating on iMDB': ratings, 'Number of ratings': number_ratings}, index=list(range(1,length+1)))
+    df = pd.DataFrame({'Title': titles, 'Year': years, 'Director': directors, 'Runtime': runtimes, 'Country': countries, 'Rating on FA': ratings, 'Number of ratings': number_ratings}, index=list(range(1,length+1)))
     df.to_csv('Pelis2021.csv', index = False)
     print('Done')
 
