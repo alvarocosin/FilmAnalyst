@@ -3,6 +3,7 @@ import pandas as pd
 from movie import Movie
 import requests
 from bs4 import BeautifulSoup
+import colorama
 
 def make_list():
     print('Starting program...\nIt might take a while')
@@ -23,10 +24,12 @@ def make_list():
         movies.append(movie)
     return movies
 
-def progress_bar(progress, total):
+def progress_bar(progress, total, color = colorama.Fore.YELLOW):
     percent = 100 * (progress / float(total))
     bar = '█' * int(percent) + '-' * (100 - int(percent))
-    print(f"\r|{bar}| {percent:.2f}%", end="\r")  
+    print(color + f"\r|{bar}| {percent:.2f}%", end="\r") 
+    if(progress == total):
+        print(colorama.Fore.GREEN + f"\r|{bar}| {percent:.2f}%", end="\r")  
 
 
 def get_movies_data(movie_list):
@@ -64,23 +67,33 @@ def get_movies_data(movie_list):
 
             runtime = soup.find('dd', itemprop='duration').text
             runtime = runtime.strip(' min.')
+            runtime = int(runtime)
             country_name = ''
             country = soup.find('span', id='country-img')
             for cname in country:
                 country_name = cname['alt']
             rating = soup.find('div', id='movie-rat-avg').text
             rating = rating.strip()
+            rating = rating.replace(',','.')
+            rating = float(rating)
             n_ratings = soup.find('span', itemprop='ratingCount').text
+            n_ratings = n_ratings.replace('.', '')
+            n_ratings = int(n_ratings)
         else:
             runtime = soup.find('dd', itemprop='duration').text
             runtime = runtime.strip(' min.')
+            runtime = int(runtime)
             country_name = ''
             country = soup.find('span', id='country-img')
             for cname in country:
                 country_name = cname['alt']
             rating = soup.find('div', id='movie-rat-avg').text
             rating = rating.strip()
+            rating = rating.replace(',','.')
+            rating = float(rating)
             n_ratings = soup.find('span', itemprop='ratingCount').text
+            n_ratings = n_ratings.replace('.', '')
+            n_ratings = int(n_ratings)
         runtimes.append(runtime)
         countries.append(country_name)
         ratings.append(rating)
@@ -89,11 +102,13 @@ def get_movies_data(movie_list):
         progress_bar(cont, total)
     for movie in movie_list:
         titles.append(movie.title)
+        movie.year = int(movie.year)
         years.append(movie.year)
         directors.append(movie.director)
     length = len(movie_list)
-    df = pd.DataFrame({'Title': titles, 'Year': years, 'Director': directors, 'Runtime': runtimes, 'Country': countries, 'Rating on FA': ratings, 'Number of ratings': number_ratings}, index=list(range(1,length+1)))
-    df.to_csv('Pelis2021.csv', index = False)
+    df = pd.DataFrame({'Title': titles, 'Year': years, 'Director': directors, 'Runtime (mins.)': runtimes, 'Country': countries, 'Rating on FA': ratings, 'Number of ratings': number_ratings}, index=list(range(1,length+1)))
+    df.to_excel('Pelis2021.xlsx', index = False, header = True)
+    print(colorama.Fore.RESET)
     print('Done')
 
 def main():
