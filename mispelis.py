@@ -107,7 +107,7 @@ def get_movies_data(movie_list):
         directors.append(movie.director)
     length = len(movie_list)
     df = pd.DataFrame({'Title': titles, 'Year': years, 'Director': directors, 'Runtime (mins.)': runtimes, 'Country': countries, 'Rating on FA': ratings, 'Number of ratings': number_ratings}, index=list(range(1,length+1)))
-    df.to_csv('Pelis2021.csv', index = False, header = True)
+    df.to_excel('Pelis2021.xlsx', index = False, header = True)
     print(colorama.Fore.RESET)
     print('Done')
 
