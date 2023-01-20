@@ -12,3 +12,8 @@ Every year since 2019 I have taken the time to write down every film I watch inc
 I was curious to see more data regarding every film, like how popular each one is or what film is considered the best among the ones I watched.
 So I decided to use web scraping to collect data from a familiar web-site called FilmAffinity (similar to iMDB but for spanish speaking people). 
 I used the data I had (title, year, director) and combined it with the data I scraped that I was interested in to write an Excel document.
+
+## Usage :computer:
+This script is written in Python and is executed through a terminal command. Basically what this script makes is reading a .txt file that looks like the text I wrote above and separates every line (every film) and every piece of information from the film. Afterwards it scrapes the data from the FilmAffinity site and pairs it with each film. 
+Here's how the execution looks like:
+
