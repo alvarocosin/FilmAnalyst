@@ -1,5 +1,5 @@
 # FilmAnalyst :movie_camera: :bar_chart:
-FilmAnalyst is a tool made in Python to analyze a set of data. In this case it analyzes a list of films watched in a year.
+FilmAnalyst is a data analytics tool that reads a list of movies from a text file, scraps additional information from the internet, and provides relevant statistics like the average rating or the country.
 
 Every year since 2019 I have taken the time to write down every film I watch including its title, year and director. All my lists look something like this:
 ```bash
