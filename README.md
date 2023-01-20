@@ -14,7 +14,7 @@ So I decided to use web scraping to collect data from a familiar web-site called
 I used the data I had (title, year, director) and combined it with the data I scraped that I was interested in to write an Excel document.
 
 ## Usage :computer:
-This script is written in Python and is executed through a terminal command. Basically what this script makes is reading a .txt file that looks like the text I wrote above and separates every line (every film) and every piece of information from the film. Afterwards it scrapes the data from the FilmAffinity site and pairs it with each film. \ Here's how the execution looks like:
+This script is written in Python and is executed through a terminal command. Basically what this script makes is reading a .txt file that looks like the text I wrote above and separates every line (every film) and every piece of information from the film. Afterwards it scrapes the data from the FilmAffinity site and pairs it with each film. \\ Here's how the execution looks like:
 ![](https://raw.githubusercontent.com/alvarocosin/Mispelis/main/resources/initial.png)
 
 
