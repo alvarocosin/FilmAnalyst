@@ -15,16 +15,16 @@ I used the data I had (title, year, director) and combined it with the data I sc
 
 ## Usage :computer:
 This script is written in Python and is executed through a terminal command. Basically what this script makes is reading a .txt file that looks like the text I wrote above and separates every line (every film) and every piece of information from the film. Afterwards it scrapes the data from the FilmAffinity site and pairs it with each film.<br> 
-Here's how the execution looks like:
+<br> Here's how the execution looks like:
 ![](https://raw.githubusercontent.com/alvarocosin/Mispelis/main/resources/initial.png)
-And here it has finished!
+<br> And here it has finished!
 ![](https://raw.githubusercontent.com/alvarocosin/Mispelis/main/resources/finished.gif)
 <br> The result is an .xlsx file with all the data I had written plus the data I scraped from the FilmAffinity site. Using Pandas library it's clearly divided by columns and headers for each one. <br>
-The excel file look like this in LibreOffice:
+<br> The excel file look like this in LibreOffice:
 ![](https://raw.githubusercontent.com/alvarocosin/Mispelis/main/resources/libreoffice.png)
 
 ## Final result :chart_with_upwards_trend:
 Finally, I use Microsoft Office Excel to turn the data into a table, which I can filter and sort easily. Also I insert subtables and charts to analyze a particular piece of data which I am interested in a clearer way. <br>
-Here is the final excel document:
+<br> Here is the final excel document:
 ![](https://raw.githubusercontent.com/alvarocosin/Mispelis/main/resources/excel.png)
 
