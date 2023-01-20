@@ -22,7 +22,9 @@ And here it has finished!
 <br> The result is an .xlsx file with all the data I had written plus the data I scraped from the FilmAffinity site. Using Pandas library it's clearly divided by columns and headers for each one. <br>
 The excel file look like this in LibreOffice:
 ![](https://raw.githubusercontent.com/alvarocosin/Mispelis/main/resources/libreoffice.png)
-<br> Finally, I use Microsoft Office Excel to turn the data into a table, which I can filter and sort easily. Also I insert subtables and charts to analyze a particular piece of data which I am interested in a clearer way. <br>
+
+## Final result :chart_with_upwards_trend:
+Finally, I use Microsoft Office Excel to turn the data into a table, which I can filter and sort easily. Also I insert subtables and charts to analyze a particular piece of data which I am interested in a clearer way. <br>
 Here is the final excel document:
 ![](https://raw.githubusercontent.com/alvarocosin/Mispelis/main/resources/excel.png)
 
